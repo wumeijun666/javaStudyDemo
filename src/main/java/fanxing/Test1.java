@@ -41,4 +41,9 @@ class Person implements Comparable<Person>{
 	public int compareTo(Person o) {
 		return this.name.compareTo(o.name);
 	}
+
+	public static<T>  T getMiddleElement(T... a) {
+
+		return a[a.length / 2];
+	}
 }

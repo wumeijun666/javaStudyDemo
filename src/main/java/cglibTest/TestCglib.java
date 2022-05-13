@@ -1,6 +1,7 @@
 package cglibTest;
 
-import org.springframework.cglib.proxy.Enhancer;
+
+import net.sf.cglib.proxy.Enhancer;
 
 public class TestCglib {
 

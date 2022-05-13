@@ -1,7 +1,5 @@
 package reflect;
 
-import groovy.transform.builder.Builder;
-
 import java.io.Serializable;
 
 /***
@@ -9,7 +7,7 @@ import java.io.Serializable;
  * 因此调用方法时可以忽略权限检查，它可以访问私有得方法和属性，因此可能会破坏封装性而导致安全问题。
  * 反射 能得到类得属性和方法，一般不用反射研究静态的方法和属性。对于静态方法和属性是编译期间通过类就能得到的，反射是动态创建的，对于静态的不需要反射去管理。
  */
-@Builder
+
 public class Cat extends Animal<String> implements Cloneable, Serializable {
 	public String name;
 	private int age;
