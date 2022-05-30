@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * @Author Seven Wu
+ *
+ */
 public class TestLambaFor {
 	public static void main(String[] args) {
 		List<Student> students = new ArrayList<>() {{
@@ -24,13 +28,14 @@ public class TestLambaFor {
 		}).collect(Collectors.toList());
 		System.out.println(results);*/
 
-		List<Student>  results = students.stream().filter(student -> students2.stream().filter(s2 -> s2.getName().equals(student.getName())).findAny().isEmpty()).collect(Collectors.toList());
+		List<Student> results = students.stream().filter(student -> students2.stream().filter(s2 -> s2.getName().equals(student.getName())).findAny().isEmpty()).collect(Collectors.toList());
 
 		System.out.println(results);
 
-
+		Student zs = students.stream().filter(s2 -> "zs".equals(s2.getName())).findAny().get();
+		System.out.println("zs=" + zs);
 		// Creating a List of Strings
-		List<String> list = Arrays.asList("aaa","for",
+		List<String> list = Arrays.asList("aaa", "for",
 				"GeeksQuiz", "GFG");
 
 		// Using Stream findAny() to return

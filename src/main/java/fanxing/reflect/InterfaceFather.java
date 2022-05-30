@@ -6,7 +6,7 @@ public class InterfaceFather {
 		System.out.println(superclass);
 		Class<?>[] interfaces = A.class.getInterfaces();
 		for (Class<?> anInterface : interfaces) {
-
+			System.out.println(anInterface);
 		}
 	}
 }
@@ -17,7 +17,7 @@ abstract class C {
 interface D {
 
 }
-class A implements D {
+class A extends C  implements D {
 
 }
 
