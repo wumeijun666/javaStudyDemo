@@ -28,7 +28,7 @@ public class TestLambaFor {
 		}).collect(Collectors.toList());
 		System.out.println(results);*/
 
-		List<Student> results = students.stream().filter(student -> students2.stream().filter(s2 -> s2.getName().equals(student.getName())).findAny().isEmpty()).collect(Collectors.toList());
+		List<Student> results = students.stream().filter(student -> students2.stream().filter(s2 -> s2.getName().equals(student.getName())).findAny().isPresent()).collect(Collectors.toList());
 
 		System.out.println(results);
 
