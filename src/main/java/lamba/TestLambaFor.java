@@ -27,7 +27,7 @@ public class TestLambaFor {
 			return s.age > 13;
 		}).collect(Collectors.toList());
 		System.out.println(results);*/
-
+		//获取两个集合中元素相同的值
 		List<Student> results = students.stream().filter(student -> students2.stream().filter(s2 -> s2.getName().equals(student.getName())).findAny().isPresent()).collect(Collectors.toList());
 
 		System.out.println(results);
