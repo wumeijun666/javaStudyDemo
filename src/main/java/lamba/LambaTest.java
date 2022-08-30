@@ -12,7 +12,7 @@ public class LambaTest {
 		List<String> itemList = new ArrayList<>();
 		itemList.add("Eric");
 		itemList.add("CoderGeshu");
-		itemList.add("seven");
+		itemList.add("seven1");
 		System.out.println(itemList);
 		Stream<String> stringStream = itemList.stream().sorted((s1, s2) -> s2.length() - s1.length()).parallel();
 		assertTrue(stringStream.isParallel());
